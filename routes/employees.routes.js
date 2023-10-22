@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const Employee = require('../models/employee.model');
+const Employee = require('../models/employe.model');
 
 router.get('/employees', async (req, res) => {
   try {
-    res.json(await Department.find());
+    res.json(await Employee.find());
   }
   catch(err) {
     res.status(500).json({ message: err });
