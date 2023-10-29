@@ -2,7 +2,7 @@ const Employee = require('../employe.model');
 const expect = require('chai').expect;
 const mongoose = require('mongoose');
 
-describe('Employee', () => {
+describe('Employee - model', () => {
 
   it('should throw an error if no any arg', async () => {
     const emp = new Employee({}); // create new Employee, but don't set any attr value
@@ -135,7 +135,4 @@ describe('Employee', () => {
     }
   });
 
-  after(() => {
-    mongoose.models = {};
-  });
 }); 

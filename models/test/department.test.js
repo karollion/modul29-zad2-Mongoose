@@ -2,7 +2,7 @@ const Department = require('../department.model');
 const expect = require('chai').expect;
 const mongoose = require('mongoose');
 
-describe('Department', () => {
+describe('Department - model', () => {
 
   it('should throw an error if no "name" arg', async () => {
     const dep = new Department({}); // create new Department, but don't set `name` attr value
@@ -48,7 +48,4 @@ describe('Department', () => {
     }
   });
 
-  after(() => {
-    mongoose.models = {};
-  });
 }); 
